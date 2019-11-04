@@ -7,84 +7,44 @@
 //
 
 import SwiftUI
+import Combine
 
 struct TinderView: View {
-    @State var offset = CGSize.zero
+    @ObservedObject var store: FoodStore
     
     var body: some View {
-        let drag = DragGesture()
-            .onChanged { self.offset = $0.translation }
-            .onEnded {
-                if $0.translation.width < -100 {
-                    self.offset = .init(width: -1000, height: 0)
-                } else if $0.translation.width > 100 {
-                    self.offset = .init(width: 1000, height: 0)
-                } else {
-                    self.offset = .zero
-                }
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                    self.offset = .zero
-                }
-        }
-        
-        return ZStack {
+        ZStack {
             BlurView(style: .systemMaterial)
             
             VStack(spacing: 0) {
                 ZStack {
-                    CardView(image: "mango_sticky_rice", food: "Mango Sticky Rice", restaurant: "Central Plaza Airport")
+                    VStack {
+                        Image(systemName: "hourglass")
+                            .font(Font.largeTitle.weight(.black))
+                        
+                        Text("Tasting more food...")
+                            .font(.title)
+                            .fontWeight(.bold)
+                    }
+                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 600)
                     
-                    CardView()
-                        .rotationEffect(Angle(degrees: Double(offset.width / 10)))
-                        .offset(x: offset.width, y: offset.height)
-                        .gesture(drag)
-                        .animation(.spring())
+                    ForEach(store.foods) { food in
+                        CardView(image: food.image, food: food.name, restaurant: food.restaurant)
+                    }
                 }
-                
-                MenuView()
             }
             
             Spacer()
         }
         .background(Color.gray)
         .edgesIgnoringSafeArea(.all)
+        .onAppear(perform: store.fetch)
     }
 }
 
 struct TinderView_Previews: PreviewProvider {
     static var previews: some View {
-        TinderView()
-    }
-}
-
-struct MenuView: View {
-    var body: some View {
-        HStack {
-            VStack {
-                Image(systemName: "xmark")
-                    .font(Font.title.weight(.black))
-                
-            }
-            .frame(width: 44, height: 44)
-            .background(Color.white)
-            .foregroundColor(.red)
-            .cornerRadius(22)
-            .shadow(color: .gray, radius: 20, x: 0, y: 10)
-            
-            Spacer()
-            
-            VStack {
-                Image(systemName: "heart.fill")
-                    .font(Font.title.weight(.thin))
-                    .offset(y: 2)
-                
-            }
-            .frame(width: 44, height: 44)
-            .background(Color.white)
-            .foregroundColor(.green)
-            .cornerRadius(22)
-            .shadow(color: .gray, radius: 20, x: 0, y: 10)
-        }
-        .frame(maxWidth: 150)
+        TinderView(store: FoodStore())
+            .previewDevice("iPhone 11 Pro")
     }
 }

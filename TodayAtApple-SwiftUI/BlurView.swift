@@ -8,8 +8,6 @@
 
 import SwiftUI
 
-import SwiftUI
-
 struct BlurView: UIViewRepresentable {
     
     let style: UIBlurEffect.Style

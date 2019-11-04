@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06461FF323701FA400243E18 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06461FF223701FA400243E18 /* MenuView.swift */; };
+		06461FF523701FF800243E18 /* FoodStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06461FF423701FF800243E18 /* FoodStore.swift */; };
 		06F5942E236EADF700B15A12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F5942D236EADF700B15A12 /* AppDelegate.swift */; };
 		06F59430236EADF700B15A12 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F5942F236EADF700B15A12 /* SceneDelegate.swift */; };
 		06F59432236EADF700B15A12 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F59431236EADF700B15A12 /* ContentView.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06461FF223701FA400243E18 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		06461FF423701FF800243E18 /* FoodStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodStore.swift; sourceTree = "<group>"; };
 		06F5942A236EADF700B15A12 /* TodayAtApple-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TodayAtApple-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06F5942D236EADF700B15A12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06F5942F236EADF700B15A12 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,7 +71,9 @@
 				06F59431236EADF700B15A12 /* ContentView.swift */,
 				06F59441236EC90900B15A12 /* TinderView.swift */,
 				06F59445236EE5CF00B15A12 /* CardView.swift */,
+				06461FF223701FA400243E18 /* MenuView.swift */,
 				06F59443236EDCAC00B15A12 /* BlurView.swift */,
+				06461FF423701FF800243E18 /* FoodStore.swift */,
 				06F59433236EADFA00B15A12 /* Assets.xcassets */,
 				06F59438236EADFA00B15A12 /* LaunchScreen.storyboard */,
 				06F5943B236EADFA00B15A12 /* Info.plist */,
@@ -155,12 +161,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06461FF323701FA400243E18 /* MenuView.swift in Sources */,
 				06F59442236EC90900B15A12 /* TinderView.swift in Sources */,
 				06F5942E236EADF700B15A12 /* AppDelegate.swift in Sources */,
 				06F59444236EDCAD00B15A12 /* BlurView.swift in Sources */,
 				06F59430236EADF700B15A12 /* SceneDelegate.swift in Sources */,
 				06F59446236EE5CF00B15A12 /* CardView.swift in Sources */,
 				06F59432236EADF700B15A12 /* ContentView.swift in Sources */,
+				06461FF523701FF800243E18 /* FoodStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
