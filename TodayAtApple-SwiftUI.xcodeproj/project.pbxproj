@@ -15,6 +15,7 @@
 		06F5943A236EADFA00B15A12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06F59438236EADFA00B15A12 /* LaunchScreen.storyboard */; };
 		06F59442236EC90900B15A12 /* TinderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F59441236EC90900B15A12 /* TinderView.swift */; };
 		06F59444236EDCAD00B15A12 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F59443236EDCAC00B15A12 /* BlurView.swift */; };
+		06F59446236EE5CF00B15A12 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F59445236EE5CF00B15A12 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		06F5943B236EADFA00B15A12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06F59441236EC90900B15A12 /* TinderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderView.swift; sourceTree = "<group>"; };
 		06F59443236EDCAC00B15A12 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		06F59445236EE5CF00B15A12 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				06F5942F236EADF700B15A12 /* SceneDelegate.swift */,
 				06F59431236EADF700B15A12 /* ContentView.swift */,
 				06F59441236EC90900B15A12 /* TinderView.swift */,
+				06F59445236EE5CF00B15A12 /* CardView.swift */,
 				06F59443236EDCAC00B15A12 /* BlurView.swift */,
 				06F59433236EADFA00B15A12 /* Assets.xcassets */,
 				06F59438236EADFA00B15A12 /* LaunchScreen.storyboard */,
@@ -156,6 +159,7 @@
 				06F5942E236EADF700B15A12 /* AppDelegate.swift in Sources */,
 				06F59444236EDCAD00B15A12 /* BlurView.swift in Sources */,
 				06F59430236EADF700B15A12 /* SceneDelegate.swift in Sources */,
+				06F59446236EE5CF00B15A12 /* CardView.swift in Sources */,
 				06F59432236EADF700B15A12 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
