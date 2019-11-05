@@ -1,5 +1,5 @@
 //
-//  TinderView.swift
+//  SwipeView.swift
 //  TodayAtApple-SwiftUI
 //
 //  Created by Harry Ng on 3/11/2019.
@@ -9,7 +9,7 @@
 import SwiftUI
 import Combine
 
-struct TinderView: View {
+struct SwipeView: View {
     @ObservedObject var store: FoodStore
     
     var body: some View {
@@ -17,6 +17,16 @@ struct TinderView: View {
             BlurView(style: .systemMaterial)
             
             VStack(spacing: 0) {
+                Button(action: { }) {
+                    Image("Spork")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 120)
+                }
+                .foregroundColor(.black)
+                .shadow(radius: 8)
+                .offset(y: 10)
+                
                 ZStack {
                     VStack {
                         Image(systemName: "hourglass")
@@ -32,6 +42,8 @@ struct TinderView: View {
                         CardView(image: food.image, food: food.name, restaurant: food.restaurant)
                     }
                 }
+                
+//                MenuView()
             }
             
             Spacer()
@@ -44,7 +56,7 @@ struct TinderView: View {
 
 struct TinderView_Previews: PreviewProvider {
     static var previews: some View {
-        TinderView(store: FoodStore())
+        SwipeView(store: FoodStore())
             .previewDevice("iPhone 11 Pro")
     }
 }
